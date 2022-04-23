@@ -1,12 +1,14 @@
-#----------------------------------------------------#
+#-------------------------------------------------------------------------------------------------------------------------#
+
 # El codigo tiene problemas de optimizacion. Sobre todo porque la libreria statsmodel requiere matrices NTxNT 
-# para hacer el calculo de los estimadores FGSL, entonces el tiempo de ejecucion pasa de +-1m para el 
-# primer ejercicio a +5h para el último. Es por esto que para mayor comodidad volqué todo el codigo a una jupyter notebook 
-# donde esta exactamente el mismo codigo, pero en las celdas de resultado ya están cargados los valores que reporté en el 
-# trabajo practico. Para accedera esa notebook se debe seguir el siguiente link:
+# para hacer el calculo de los estimadores FGSL entonces el tiempo de ejecucion pasa de +-1m para el 
+# primer ejercicio a +5h para el ultimo. Es por esto que para mayor comodidad volque todo el codigo a una jupyter notebook 
+# donde esta exactamente el mismo codigo, pero en las celdas de resultado ya están cargados los valores que reporte en el 
+# trabajo practico. Para acceder a esa notebook se debe seguir el siguiente enlace:
 #
 #        ****  https://github.com/CreamBBQ/Datos-de-panel/blob/master/TP1/Mu%C3%B1oz1313.ipynb  ****
-#----------------------------------------------------#
+
+#-------------------------------------------------------------------------------------------------------------------------#
 
 
 import pandas as pd 
@@ -86,8 +88,8 @@ def get_simulation_report(muestras, N, T): #Genera los datos pedidos por cada un
             count_power_b0 = count_power_b0 + 1 
         if test.pvalue[2] <= 0.01: 
             count_power_b1 = count_power_b1 + +1
-    report = {'Tamaño al 1%': count_size_1/muestras, 
-              'Tamaño al 5%': count_size_5/muestras, 
+    report = {'Tamanio al 1%': count_size_1/muestras, 
+              'Tamanio al 5%': count_size_5/muestras, 
               'Poder de b_0=0 al 1%': count_power_b0/muestras, 
               'Poder de b_1=0.4 al 1%': count_power_b1/muestras,
               'Media de b_0': np.mean(coef_list_0 ),
@@ -99,30 +101,38 @@ def get_simulation_report(muestras, N, T): #Genera los datos pedidos por cada un
     return report
 
 
-print('-------EJERCICIO 1: N = 5-------')
-ej1 = get_simulation_report(muestras = 5000, N = 5, T = 4)
-print(ej1)
+def run(): 
+    print('-------EJERCICIO 1: N = 5-------')
+    ej1 = get_simulation_report(muestras = 5000, N = 5, T = 4)
+    print(ej1)
+
+    print('-------EJERCICIO 2: N = 10-------')
+    ej2 = get_simulation_report(muestras = 5000, N = 10, T = 4)
+    print(ej2)
+
+    print('-------EJERCICIO 3: N = 30-------')
+    ej3 = get_simulation_report(muestras = 5000, N = 30, T = 4)
+    print(ej3)
 
 
-print('-------EJERCICIO 2: N = 10-------')
-ej2 = get_simulation_report(muestras = 5000, N = 10, T = 4)
-print(ej2)
+    print('-------EJERCICIO 4: N = 100-------') 
+    ej4 = get_simulation_report(muetras = 5000, N = 100, T = 4)
+    print(ej4)
 
 
-print('-------EJERCICIO 3: N = 30-------')
-ej3 = get_simulation_report(muestras = 5000, N = 30, T = 4)
-print(ej3)
+    print('-------EJERCICIO 1: N = 200-------')
+    ej5 = get_simulation_report(muestras = 5000, N = 200, T = 4)
+    print(ej5)
+
+    print('-------EJERCICIO 1: N = 500-------')
+    ej6 = get_simulation_report(muestras = 5000, N = 500, T = 4)
+    print(ej6)
+    
+
+if __name__ == "__main__": 
+    run()
 
 
-print('-------EJERCICIO 4: N = 100-------') 
-ej4 = get_simulation_report(muetras = 5000, N = 100, T = 4)
-print(ej4)
 
 
-print('-------EJERCICIO 1: N = 200-------')
-ej5 = get_simulation_report(muestras = 5000, N = 200, T = 4)
-print(ej5)
 
-print('-------EJERCICIO 1: N = 500-------')
-ej6 = get_simulation_report(muestras = 5000, N = 500, T = 4)
-print(ej6)
