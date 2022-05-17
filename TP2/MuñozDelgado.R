@@ -4,7 +4,7 @@
 #todos los resultados cargados por si resulta mas comoda la correcion (excepto 
 #por el ejercicio 1.F que tiene problemas en la notebook pero en el Rstudio
 #funciona perfecto):
-#              *** LINK ****
+# ***  https://github.com/CreamBBQ/Datos-de-panel/blob/master/TP2/Mu%C3%B1ozDelgado.ipynb  ****
 #
 #
 #----------------------------------------------------------------------------#
