@@ -1,7 +1,7 @@
 # ¡Hola! Se pueden consultar los resultados sin ejecutar el codigo visitando 
 # la siguiente notebook: 
 #       
-#                          **LINK**
+#   **https://github.com/CreamBBQ/Datos-de-panel/blob/master/TP3/code.ipynb**
 #
 # La notacion TT hace referencia al periodo de tiempo (T en el tp), lo cambie 
 # porque T es una palabra reservada en R y traia algunos problemas en la ejecucion
