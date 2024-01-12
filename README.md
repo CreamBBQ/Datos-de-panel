@@ -1,2 +1,2 @@
 # Datos-de-panel
-Trabajos prácticos y problems sets de la materia 
+Notas teóricas llevadas a la práctica a través de R de econometría de datos de panel. 
